@@ -11,7 +11,7 @@
 
 ## Landing page · Propósito y uso
 
-Visita la **[landing page](https://sc09012.github.io/gestor-de-finanzas/)** para conocer el **propósito de la app** y el **modo de usarla** paso a paso.
+Visita  **https://sc09012.github.io/gestor-de-finanzas/ ** para conocer el **propósito de la app** y el **modo de usarla** paso a paso.
 
 Ahí encontrarás:
 
