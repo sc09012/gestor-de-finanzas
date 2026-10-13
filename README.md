@@ -60,11 +60,9 @@ Para la **versión de escritorio**, el HTML se envuelve con [Electron](https://w
 
 | Recurso | Enlace |
 | --- | --- |
-| Aplicación en línea (GitHub Pages) | `https://TU-USUARIO.github.io/gestor-de-finanzas/` |
-| Ejecutable para Windows | `https://github.com/TU-USUARIO/gestor-de-finanzas/releases/latest` |
-| Repositorio | `https://github.com/TU-USUARIO/gestor-de-finanzas` |
-
-> Reemplaza `TU-USUARIO` por tu nombre de usuario de GitHub.
+| Aplicación en línea (GitHub Pages) | `https://sc09012.github.io/gestor-de-finanzas/` |
+| Ejecutable para Windows | `https://github.com/sc09012/gestor-de-finanzas/releases/latest` |
+| Repositorio | `https://github.com/sc09012/gestor-de-finanzas` |
 
 ---
 
@@ -77,7 +75,7 @@ Tienes cuatro formas de usarlo. Elige la que te resulte más cómoda.
 No instala nada. Abre en tu navegador:
 
 ```
-https://TU-USUARIO.github.io/gestor-de-finanzas/
+https://sc09012.github.io/gestor-de-finanzas/
 ```
 
 Pulsa **Abrir la aplicación** y empieza a registrar tus movimientos.
@@ -93,7 +91,7 @@ Ideal si quieres el archivo suelto para abrirlo con doble clic:
 También puedes descargarlo directo:
 
 ```
-https://github.com/TU-USUARIO/gestor-de-finanzas/raw/main/nexfinance_mvp_fecha.html
+https://github.com/sc09012/gestor-de-finanzas/raw/main/nexfinance_mvp_fecha.html
 ```
 
 ### Opción 3 · Descargar el ejecutable de Windows (.exe)
@@ -112,7 +110,7 @@ Requisitos: [Node.js 18+](https://nodejs.org/).
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/TU-USUARIO/gestor-de-finanzas.git
+git clone https://github.com/sc09012/gestor-de-finanzas.git
 cd gestor-de-finanzas
 
 # 2. Instala las dependencias
@@ -196,7 +194,7 @@ Para activarlo la primera vez:
 2. Ve a **Settings → Pages**.
 3. En **Source**, elige **GitHub Actions**.
 4. Espera a que termine el workflow en la pestaña **Actions**.
-5. Tu sitio estará en `https://TU-USUARIO.github.io/gestor-de-finanzas/`.
+5. Tu sitio estará en `https://sc09012.github.io/gestor-de-finanzas/`.
 
 ---
 
