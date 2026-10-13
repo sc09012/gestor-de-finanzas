@@ -1,0 +1,40 @@
+{
+  "name": "nexfinance",
+  "version": "1.0.0",
+  "description": "NexFinance - Gestor de finanzas personales",
+  "main": "main.js",
+  "author": "NexFinance",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.nexfinance.app",
+    "productName": "NexFinance",
+    "files": [
+      "main.js",
+      "nexfinance_mvp_fecha.html"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

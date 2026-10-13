@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexFinance · Gestor de Finanzas</title>
+    <meta name="description" content="NexFinance: gestor de finanzas personales con balance mensual, gráficos interactivos y exportación de reportes en PDF.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #020617;
+            background-image: radial-gradient(circle at 15% 50%, rgba(14, 165, 233, 0.15), transparent 25%),
+                              radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        .btn-glow { transition: all .3s ease; }
+        .btn-glow:hover { box-shadow: 0 0 15px currentColor; transform: translateY(-1px); }
+        .neon-text-green { color: #4ade80; text-shadow: 0 0 10px rgba(74, 222, 128, 0.4); }
+        .neon-text-red { color: #f87171; text-shadow: 0 0 10px rgba(248, 113, 113, 0.4); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+        ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.6); }
+    </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+    <main class="glass-card w-full max-w-4xl rounded-3xl p-8 md:p-12 relative overflow-hidden mt-6">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"></div>
+
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 tracking-tight">NexFinance</h1>
+            <p class="text-slate-400 text-sm mt-2 tracking-[0.2em] uppercase">Terminal de Control Financiero v1.0</p>
+            <p class="text-slate-300 mt-6 max-w-2xl mx-auto">
+                Gestor de finanzas personales para registrar ingresos y gastos, visualizar tu balance mensual,
+                analizar tus conceptos en un gráfico interactivo y exportar un reporte profesional en PDF.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <a href="app.html" class="btn-glow text-cyan-400 border border-cyan-400/50 hover:bg-cyan-950/30 px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-center">
+                Abrir la aplicación
+            </a>
+            <a href="app.html" download="NexFinance.html" class="btn-glow text-green-400 border border-green-400/50 hover:bg-green-950/30 px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-center">
+                Descargar HTML
+            </a>
+            <a data-releases href="#windows" class="btn-glow text-purple-400 border border-purple-400/50 hover:bg-purple-950/30 px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-center">
+                Windows (.exe)
+            </a>
+        </div>
+
+        <section class="mb-10">
+            <h2 class="text-sm tracking-[0.2em] text-slate-400 uppercase mb-6">¿Qué incluye?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Balance mensual</h3>
+                    <p class="text-sm text-slate-400">Selecciona el mes y año del balance con el selector de fecha.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Ingresos y gastos</h3>
+                    <p class="text-sm text-slate-400">Agrega filas ilimitadas con concepto y monto; el total se calcula al instante.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Diagnóstico financiero</h3>
+                    <p class="text-sm text-slate-400">Detecta superávit o déficit con alertas de color en tiempo real.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Gráfico interactivo</h3>
+                    <p class="text-sm text-slate-400">Visualiza la distribución de cada ingreso y gasto por concepto.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Exportar reporte PDF</h3>
+                    <p class="text-sm text-slate-400">Genera un PDF con el mes del balance y todos tus movimientos.</p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border border-slate-800">
+                    <h3 class="font-semibold text-slate-100 mb-1">Formato de moneda</h3>
+                    <p class="text-sm text-slate-400">Los montos se formatean automáticamente (es-CO).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-sm tracking-[0.2em] text-slate-400 uppercase mb-6">Cómo usarlo</h2>
+            <ol class="space-y-4 text-slate-300 list-decimal list-inside">
+                <li><span class="text-slate-100 font-semibold">En línea:</span> pulsa <em>Abrir la aplicación</em> y úsala directo en el navegador.</li>
+                <li><span class="text-slate-100 font-semibold">En tu PC:</span> descarga el <code class="text-cyan-300">.exe</code> para Windows o el archivo <code class="text-cyan-300">.html</code> y ábrelo con doble clic.</li>
+                <li><span class="text-slate-100 font-semibold">Reporte:</span> dentro de la app haz clic en <em>Exportar Reporte</em> para descargar el PDF.</li>
+            </ol>
+        </section>
+
+        <section id="windows" class="mb-4">
+            <h2 class="text-sm tracking-[0.2em] text-slate-400 uppercase mb-4">Descarga para escritorio</h2>
+            <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                <p class="text-slate-300 mb-4">
+                    Descarga el instalador o la versión portable para Windows desde las <span class="text-slate-100 font-semibold">Releases</span> del repositorio.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a data-releases class="btn-glow text-purple-400 border border-purple-400/50 hover:bg-purple-950/30 px-5 py-3 rounded-xl font-semibold">
+                        Descargar .exe (Windows)
+                    </a>
+                    <a data-repo class="btn-glow text-slate-300 border border-slate-600 hover:bg-slate-800/40 px-5 py-3 rounded-xl font-semibold">
+                        Ver repositorio en GitHub
+                    </a>
+                </div>
+                <p data-local-note class="hidden text-xs text-slate-500 mt-4">
+                    Nota: abre esta página desde GitHub Pages para habilitar los enlaces de descarga del ejecutable.
+                </p>
+            </div>
+        </section>
+
+        <footer class="text-center text-xs text-slate-500 mt-10 border-t border-slate-800 pt-6">
+            NexFinance · Los datos se procesan localmente en tu equipo y no se envían a ningún servidor.
+        </footer>
+    </main>
+
+    <script>
+        (function () {
+            var host = location.hostname;
+            var segments = location.pathname.split('/').filter(Boolean);
+            var repo = segments[0] || 'gestor-de-finanzas';
+            var user = '';
+            var isPages = /\.github\.io$/i.test(host);
+
+            if (isPages) {
+                user = host.split('.')[0];
+            }
+
+            var repoUrl = user ? ('https://github.com/' + user + '/' + repo) : '';
+            var releasesUrl = user ? (repoUrl + '/releases/latest') : '';
+
+            document.querySelectorAll('[data-releases]').forEach(function (el) {
+                if (releasesUrl) {
+                    el.setAttribute('href', releasesUrl);
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                } else {
+                    el.addEventListener('click', function (e) { e.preventDefault(); });
+                }
+            });
+
+            document.querySelectorAll('[data-repo]').forEach(function (el) {
+                if (repoUrl) {
+                    el.setAttribute('href', repoUrl);
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                } else {
+                    el.addEventListener('click', function (e) { e.preventDefault(); });
+                }
+            });
+
+            if (!isPages) {
+                var note = document.querySelector('[data-local-note]');
+                if (note) note.classList.remove('hidden');
+            }
+        })();
+    </script>
+</body>
+</html>
