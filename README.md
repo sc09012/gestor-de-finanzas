@@ -5,11 +5,28 @@
 ![Licencia](https://img.shields.io/badge/licencia-MIT-blue)
 ![Plataforma](https://img.shields.io/badge/plataforma-Windows%20%7C%20macOS%20%7C%20Web-38bdf8)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-4ade80)
+[![Web](https://img.shields.io/badge/Web-En_línea-38bdf8)](https://sc09012.github.io/gestor-de-finanzas/)
+
+---
+
+## Landing page · Propósito y uso
+
+Visita la **[landing page](https://sc09012.github.io/gestor-de-finanzas/)** para conocer el **propósito de la app** y el **modo de usarla** paso a paso.
+
+Ahí encontrarás:
+
+- **Abrir la aplicación**: usarla directamente en el navegador.
+- **Descargar HTML**: obtener el archivo suelto para abrirlo con doble clic.
+- **Descargar Windows (.exe)**: acceder a los instaladores publicados en las Releases.
+- **Guía de uso**: explicación de cada función (ingresos, gastos, balance, gráfico y PDF).
+
+> Landing: `https://sc09012.github.io/gestor-de-finanzas/`
 
 ---
 
 ## Tabla de contenido
 
+- [Landing page · Propósito y uso](#landing-page--propósito-y-uso)
 - [Características](#características)
 - [Cómo funciona](#cómo-funciona)
 - [Capturas y acceso rápido](#capturas-y-acceso-rápido)
